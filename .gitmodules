@@ -9,7 +9,7 @@
 	path = linux
 	url = https://github.com/analogdevicesinc/linux
 	branch = 2018_R1
-[submodule "hdl"]
-	path = hdl
-	url = https://github.com/analogdevicesinc/hdl
-	branch = hdl_2018_r1
+#[submodule "hdl"]
+#	path = hdl
+#	url = https://github.com/analogdevicesinc/hdl
+#	branch = hdl_2018_r1
