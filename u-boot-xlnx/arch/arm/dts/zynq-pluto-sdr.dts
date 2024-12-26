@@ -61,7 +61,7 @@
 		};
 		partition@qspi-linux {
 			label = "qspi-linux";
-			reg = <0x200000 0x1E00000>; /* 30M */
+			reg = <0x200000 0x0E00000>; /* 30M */
 		};
 	};
 };
@@ -72,7 +72,7 @@
 
 &usb0 {
 	status = "okay";
-	dr_mode = "host";
+	dr_mode = "otg";
 	usb-phy = <&usb_phy0>;
 };
 

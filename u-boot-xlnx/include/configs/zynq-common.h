@@ -78,7 +78,7 @@
 "dfu_sf_info="\
 "set dfu_alt_info " \
 "boot.dfu raw 0x0 0x100000\\\\;" \
-"firmware.dfu raw 0x200000 0x1E00000\\\\;" \
+"firmware.dfu raw 0x200000 0xE00000\\\\;" \
 "uboot-extra-env.dfu raw 0xFF000 0x1000\\\\;" \
 "uboot-env.dfu raw 0x100000 0x20000\\\\;" \
 "spare.dfu raw 0x120000 0xE0000\0" \
@@ -127,7 +127,7 @@
 	"dfu_ram_info=" \
 	"set dfu_alt_info " \
 	"dummy.dfu ram 0 0\\\\;" \
-	"firmware.dfu ram ${fit_load_address} 0x1E00000\0" \
+	"firmware.dfu ram ${fit_load_address} 0xE00000\0" \
 	"dfu_ram=echo Entering DFU RAM mode ... && run dfu_ram_info && dfu 0 ram 0\0" \
 	"thor_ram=run dfu_ram_info && thordown 0 ram 0\0"
 
@@ -327,7 +327,7 @@
 	"read_sf=sf probe 0:0 50000000 0 && run qspiboot_extraenv &&" \
 		"sf read ${fit_load_address} 0x200000 ${fit_size} && " \
 		"iminfo ${fit_load_address} || " \
-		"sf read ${fit_load_address} 0x200000  0x1E00000; \0" \
+		"sf read ${fit_load_address} 0x200000  0xE00000; \0" \
 	"ramboot_verbose=adi_hwref;echo Copying Linux from DFU to RAM... && " \
 		"run dfu_ram;" \
 		"if run adi_loadvals; then " \
